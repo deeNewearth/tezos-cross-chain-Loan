@@ -1,0 +1,15 @@
+
+
+.loanList{
+    font-size: small;
+}
+
+.loanList .oddRow{
+    background-color: #8b811e0f;
+}
+
+.logList{
+    max-width: 35rem;
+    margin: auto;
+    text-align: left;
+}

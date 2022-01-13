@@ -1,0 +1,34 @@
+{
+	"name": "txapp",
+	"version": "1.0.0",
+	"description": "SmartTS Environment",
+	"private": true,
+	"scripts": {
+		"compile": "node ./scripts/compile.js",
+		"test": "node ./scripts/test.js",
+		"originate-testnet": "node ./scripts/compile.js && node ./scripts/originate.js --code ./build/compilation/loan.contract/SMTaker/step_000_cont_0_contract.tz --storage ./build/compilation/loan.contract/SMTaker/step_000_cont_0_storage.tz --rpc https://granadanet.smartpy.io",
+		"originate-testtoken": "node ./scripts/compile.js && node ./scripts/originate.js --code ./build/compilation/testFA1_2.contract/version_1/step_000_cont_0_contract.tz --storage ./build/compilation/testFA1_2.contract/version_1/step_000_cont_0_storage.tz --rpc https://granadanet.smartpy.io",
+		"update": "npm i create-smartpy-project@latest && create-smartpy-project update --path ./ --typescript"
+	},
+	"devDependencies": {
+		"@smartpy/timelock": "^0.0.9",
+		"create-smartpy-project": "^0.2.2",
+		"@typescript-eslint/eslint-plugin": "4.28.1",
+		"@typescript-eslint/parser": "4.28.1",
+		"eslint": "7.29.0",
+		"eslint-config-prettier": "8.3.0",
+		"eslint-plugin-prettier": "3.4.0",
+		"prettier": "2.3.2",
+		"@smartpy/ts-types": "^0.8.2",
+		"bs58check": "^2.1.2",
+		"js-sha3": "^0.8.0",
+		"libsodium-wrappers-sumo": "^0.7.9",
+		"tezos-bls12-381": "^1.1.1",
+		"blakejs": "^1.1.1",
+		"lodash": "^4.17.21",
+		"xhr2-cookies": "^1.1.0"
+	},
+	"engines": {
+		"node": ">=10"
+	}
+}

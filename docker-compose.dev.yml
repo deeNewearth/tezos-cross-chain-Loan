@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+
+  mongo:
+    image: mongo:3.6
+    entrypoint: [ "/usr/bin/mongod", "--smallfiles", "--bind_ip_all"]
+
+    ports:
+      - 27017:27017
+
+  tzApp:
+      image: node:14.18.1-buster-slim
+      command: ["tail", "-f", "/dev/null"]
+      volumes:
+       - ./tzApp:/tzApp
+
+  server:
+      image: cloudconnect.scanrev.com:5000/ne-crosschain-loan:1.0.5
+      
+      ports:
+        - 3300:3300

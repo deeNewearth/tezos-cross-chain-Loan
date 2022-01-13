@@ -1,0 +1,43 @@
+---
+To Run Dev client
+
+set REACT_APP_SERVER_URL=http://localhost:3300
+yarn start
+
+
+--- to deploy_TJ contract 
+docker exec -it tezos-cross-chain-loan_tzApp_1 bash
+cd tzApp
+export DEP_PR_KEY=XXXXXXXXXXXXXX
+
+npm run originate-testnet
+
+-- Contract KT1B2so1q1jJEfi97ngjzHWwJLMEtntXm9Zh originated!!!
+
+npm run originate-testtoken
+
+Contract KT1B4E5jnE42umeWb7HrnhgSrGPSxtR6JgCG originated!!!
+
+---
+to deploy EVM contracts
+cd C:\codework\tezos-cross-chain-Loan\evmApp
+
+npx hardhat run --network localhost scripts/deploy.ts
+
+
+set PRIVATE_KEY=XXXX----DEEDEPLOY-XXXXXXX
+npx hardhat run --network ropsten scripts/deploy-test-token.ts
+
+testToken deployed to: 0x4f3b397423a83f7db2fDbe7a98fD34f0EA2c748a
+
+npx hardhat run --network ropsten scripts/deploy.ts
+
+escrow deployed to: 0x361cf804bF937638d9C9d24F22B1E7BFC3650Bf7
+originator deployed to: 0xa5Fd5d1Ce5E10fd9892d51E4e971c5855E2Ff973
+
+
+-- Once contracts has changed run
+cd C:\codework\tezos-cross-chain-Loan\cross-chain
+npm run evmTypes
+
+----
