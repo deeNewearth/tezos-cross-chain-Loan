@@ -1,4 +1,4 @@
-# tezos-multi-chain-Loan
+# tezos-multi-chain-financing
 A cross-chain (Tezos &lt;> EVM) mechanism for loans, with collateral on one chain, and the loan being extended on another, with automated, decentralized mechanism protecting both sides from abuse.
 https://gitcoin.co/issue/tezos-contrib/gitcoin-bounties/2/100026882
 
